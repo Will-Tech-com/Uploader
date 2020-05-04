@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <dl>
+        <dt>Video Name</dt>
+        <dd>{{ upload.vid_name }}</dd>
+        <dt>Video Type</dt>
+        <dd>{{ upload.video_type }}</dd>
+        <dt>Date Created</dt>
+        <dd>{{ upload.date_uploaded }}</dd>
+    </dl>
+{% endblock  %}

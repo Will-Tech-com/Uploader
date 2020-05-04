@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Video Name</th>
+                <th>Video Type</th>
+                <th>Date Uploaded</th>
+            </tr>
+        </thead>
+        <rbody>
+            {% for video in videos %}
+                <tr>
+                    <td>
+                    <a href='{% url 'uploads:detail' video.id %}'>{{ video.vid_name }}</a>
+                    </td>
+                    <td>{{ video.video_type }}</td>
+                    <td>{{ video.date_uploaded }}</td>
+                </tr>
+            {% endfor %}
+        </rbody>
+    </table>
+{% endblock  %}
